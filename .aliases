@@ -1,3 +1,8 @@
+##### ============================
+##### GENERATED - DO NOT MODIFY
+##### This file will be overriden
+##### ============================
+
 #ready zsh configs
 alias zshrc='cat ~/.zshrc'
 alias zshalias='cat ~/.oh-my-zsh/zsh.aliases'
@@ -35,3 +40,19 @@ alias gprune='git_prune'
 
 #git rename
 alias grename='git branch -m $1'
+
+case "$OSTYPE" in
+  darwin*)
+    alias cat=bat
+    alias df=duf
+    alias ls=exa
+    alias ps=procs
+    alias sed=sd
+    alias grep=ripgrep
+    alias tree=tre
+  ;;
+  linux*)
+    # ...
+  ;;
+esac
+
