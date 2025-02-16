@@ -22,6 +22,7 @@ brew install sd #sed
 brew install ripgrep #grep
 brew install tre #tree
 brew install xsel #clipboard
+brew install hstr #history
 
 # always override base aliases/scripts
 cat .aliases >> $ZSH_CUSTOM/kinglew.zsh

@@ -56,3 +56,7 @@ case "$OSTYPE" in
   ;;
 esac
 
+#http
+alias whichport='lsof -i -P | grep LISTEN | grep $1'
+alias wport=whichport
+alias port=whichport
