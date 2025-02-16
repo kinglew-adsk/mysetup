@@ -14,30 +14,30 @@ scoop bucket add extras
 scoop bucket add nerd-fonts
 
 ## dev tools
-scoop install main/bat #cat
-scoop install main/duf #df
-scoop install main/eza #ls
-scoop install main/scc
-scoop install main/tldr #man
+scoop update main/bat #cat
+scoop update main/duf #df
+scoop update main/eza #ls
+scoop update main/scc
+scoop update main/tldr #man
 
-scoop install main/fzf
-scoop install main/jq
-scoop install main/procs #ps
-scoop install main/sd #sed
-scoop install main/ripgrep #grep
-scoop install main/tre-command #tree
-scoop install extras/autojump
+scoop update main/fzf
+scoop update main/jq
+scoop update main/procs #ps
+scoop update main/sd #sed
+scoop update main/ripgrep #grep
+scoop update main/tre-command #tree
+scoop update extras/autojump
 
-scoop install extras/bruno
-scoop install main/peco
-scoop install extras/zeal
-scoop install extras/touchcursor
+scoop update extras/bruno
+scoop update main/peco
+scoop update extras/zeal
+scoop update extras/touchcursor
 
 ## dev IDEs
-scoop install extras/vscode
-scoop install nerd-fonts/JetBrainsMono-NF
-scoop install nerd-fonts/JetBrainsMono-NF-Propo
-scoop install nerd-fonts/JetBrainsMono-NF-Mono
+scoop update extras/vscode
+scoop update nerd-fonts/JetBrainsMono-NF
+scoop update nerd-fonts/JetBrainsMono-NF-Propo
+scoop update nerd-fonts/JetBrainsMono-NF-Mono
 
 # always override base aliases/scripts
 cat .aliases >> $ZSH_CUSTOM/kinglew.zsh

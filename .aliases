@@ -50,9 +50,26 @@ case "$OSTYPE" in
     alias sed=sd
     alias grep=ripgrep
     alias tree=tre
+    alias history=hstr
   ;;
   linux*)
-    # ...
+    alias cat=bat
+    alias df=duf
+    alias ls=exa
+    alias ps=procs
+    alias sed=sd
+    alias grep=ripgrep
+    alias tree=tre
+    alias history=hstr
+  ;;
+  mysys*)
+    alias cat=bat
+    alias df=duf
+    alias ls=exa
+    alias ps=procs
+    alias sed=sd
+    alias grep=ripgrep
+    alias tree=tre
   ;;
 esac
 
