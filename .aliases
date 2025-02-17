@@ -3,6 +3,12 @@
 ##### This file will be overriden
 ##### ============================
 
+alias work="cd ~/Documents/workspace/"
+alias reload="source ~/.zshrc"
+loadenv () {
+   export $(grep -v '^#' ${1} | xargs)
+}
+
 #ready zsh configs
 alias zshrc='cat ~/.zshrc'
 alias zshalias='cat ~/.oh-my-zsh/zsh.aliases'
@@ -77,3 +83,4 @@ esac
 alias whichport='lsof -i -P | grep LISTEN | grep $1'
 alias wport=whichport
 alias port=whichport
+

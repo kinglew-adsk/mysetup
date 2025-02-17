@@ -40,11 +40,28 @@ scoop update nerd-fonts/JetBrainsMono-NF-Propo
 scoop update nerd-fonts/JetBrainsMono-NF-Mono
 
 # always override base aliases/scripts
-cat .aliases >> $ZSH_CUSTOM/kinglew.zsh
+cat .aliases >> $ZSH/custom/kinglew.zsh
 
 # tocuhcursor
 echo "setup touchcursor"
 cp ./touchcursor/settings.cfg $APPDATA/TouchCursor/settings.cfg
 
+# configure .zshrc
+sed -i 's/^ZSH_THEME=.*/ZSH_THEME="gnzh"/' ~/.zshrc
+sed -i 's/^plugins=.*/plugins=(git autojump z dotenv zsh-autosuggestions)/' ~/.zshrc
 
-
+if ! (( $(grep -c "^export.HISTSIZE" ~/.zshrc )  )) ; then
+    echo "export HISTSIZE=100000" >> ~/.zshrc
+fi
+if ! (( $(grep -c "^export.SAVEHIST" ~/.zshrc )  )) ; then
+    echo "export SAVEHIST=100000" >> ~/.zshrc
+fi
+if ! (( $(grep -c "^export.HISTCONTROL" ~/.zshrc )  )) ; then
+    echo "export HISTCONTROL=ignorespace" >> ~/.zshrc
+fi
+if ! (( $(grep -c "^setopt.hist_ignore_all_dups" ~/.zshrc )  )) ; then
+    echo "setopt hist_ignore_all_dups" >> ~/.zshrc
+fi
+if ! (( $(grep -c "^setopt.hist_ignore_space" ~/.zshrc )  )) ; then
+    echo "setopt hist_ignore_space" >> ~/.zshrc
+fi
